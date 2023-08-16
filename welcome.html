@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="en" class="p-0 m-0 scroll-smooth scroll-p-8">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04burhanuddin</title>
+    <meta name="theme-color" content="#1D2021" />
+    <meta name="author" content="04burhanuddin">
+    <meta name="keywords" content="portfolio burhanuddin, web burhanuddin, burhan r">
+    <meta name="description" content="I'm Burhan. I'm 23 years old, My passion lies in Mobile App Development">
+    <meta name="twitter:image" content="./assets/profile/me.webp">
+    <meta name="twitter:description" content="I'm Burhan. I'm 23 years old, My passion lies in Mobile App Development">
+    <meta property="og:image" content="./assets/profile/me.webp">
+    <meta property="og:description" content="I'm Burhan. I'm 23 years old, My passion lies in Mobile App Development">
+    <link rel="stylesheet" href="./css/app.css">
+    <meta name="msapplication-TileImage" content="./assets/icons/code.svg">
+    <link rel="shortcut icon" href="./assets/icons/code.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap">
+    <link rel="preload" as="style" href="./css/style.css">
+    <link rel="preload" as="image" href="./assets/profile/me.webp">
+
+</head>
+
+<body x-data="{ showContact: false }" x-cursor x-cursor-targets='[".link", ".btn"]' class="font-sans bg-black select-none hover:cursor-none cursor-none">
+    <div x-data="{ showNav: false }" class="container px-4 md:px-0 fixed inset-0 top-0 left-0 z-40 h-12 max-w-[60rem] items-center flex bg-transparent shadow-sm drop-shadow-2xl lg:rounded-3xl bg-red backdrop-blur-lg">
+        <div @click.outside="showNav = false" class="py-0.5 max-w-4xl container md:flex md:justify-between md:py-0.5">
+            <div class="flex items-center justify-between space-x-2 lg:justify-center">
+                <span class="text-lg text-green-700 link text-blue hover:text-orange font-Silckscreen">BR_</span>
+                <div class="z-20 px-1 py-1 rounded-lg bg-blue/10 md:hidden group">
+                    <div x-cloak @click="showNav = !showNav" class="w-6 h-6 text-blue group">
+                        <svg x-show="!showNav" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue group-hover:text-blue" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 6h16"></path>
+                            <path d="M7 12h13"></path>
+                            <path d="M10 18h10"></path>
+                        </svg>
+                        <svg x-show="showNav" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue group-hover:text-blue" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M18 6l-12 12"></path>
+                            <path d="M6 6l12 12"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div x-cloak :class="[showNav ? 'translate-x-0 opacity-100 backdrop-blur-0' : 'opacity-0 -translate-x-full']" class="absolute inset-0 z-50 w-full h-full px-2 py-2 transition-all ease-out bg-transparent md:shadow-none md:py-0 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+                <nav class="relative flex flex-col items-start px-6 py-4 bg-black border rounded-2xl md:items-center md:px-0 md:py-0 border-gray/20 md:border-none md:bg-transparent">
+                    <div class="mb-2.5 md:hidden">
+                        <span class="text-xs tracking-wide capitalize opacity-50 text-paragraf/50">Navigation</span>
+                    </div>
+                    <div class="flex flex-col items-start w-full lg:space-y-0 justify-items-start md:flex font-Silckscreen md:space-x-2 lg:space-x-2 md:px-1 md:flex-row md:divide-none">
+                        <a href="#home" id="homeLink" @click="showNav = !showNav" class="w-full py-2 text-sm font-medium hover:text-orange link nav-link md:py-2">Home</a>
+                        <a href="#certificate" @click="showNav = !showNav" class="w-full py-2 text-sm font-medium hover:text-orange link nav-link md:py-2">Certificate</a>
+                        <a href="#project" @click="showNav = !showNav" class="w-full py-2 text-sm font-medium hover:text-orange link nav-link md:py-2">Project</a>
+                        <a href="#blog" @click="showNav = !showNav" class="w-full py-2 text-sm font-medium link hover:text-orange nav-link md:py-2">Blogs</a>
+                        <a href="#workstation" @click="showNav = !showNav" class="w-full py-2 text-sm font-medium link nav-link hover:text-orange md:py-2">Workstation</a>
+                        <a href="#section7" @click="showContact = !showContact" type="button" class="w-full py-2 mb-2 text-sm font-medium hover:text-orange link nav-link text-start md:hidden md:py-2">Contact</a>
+                    </div>
+                </nav>
+                <div class="relative z-50 flex items-center justify-center w-full -mt-3 md:hidden">
+                    <svg @click="showNav = !showNav" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="p-1.5 hover:text-white link ring-2 ring-offset-black ring-gray/20 ring-offset-4 w-6 h-6 rounded-full bg-red text-heading">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+            </div>
+            <div class="hidden font-Silckscreen md:flex">
+                <button @click="showContact = !showContact" type="button" class="w-full py-2 text-sm font-medium hover:text-orange text-blue link text-start md:py-2">Contact &rarr;</button>
+            </div>
+        </div>
+    </div>
+    <section id="home" class="relative overflow-hidden">
+        <div class="absolute flex items-center justify-center w-full space-x-10 pointer-events-none lg:space-x-32 md:space-x-20">
+            <div class="w-[0.2px] h-32 transform rotate-45 rounded-full bg-red animate-meteor" style="animation: meteorFall 5s linear infinite;"></div>
+            <div class="w-[0.2px] h-1/3 transform rotate-45 rounded-full bg-gray animate-meteor-fast" style="animation: meteorFallFast 6s linear infinite;"></div>
+            <div class="w-[0.2px] h-8 transform rotate-45 rounded-full bg-gray animate-meteor-slow" style="animation: meteorFallSlow 2s linear infinite;"></div>
+            <div class="w-[0.2px] h-48 transform rotate-45 rounded-full bg-orange animate-meteor" style="animation: meteorFall 5s linear infinite;"></div>
+            <div class="w-[0.2px] h-52 transform rotate-45 rounded-full bg-blue animate-meteor-fast" style="animation: meteorFallSlow 3s linear infinite;"></div>
+            <div class="w-[0.2px] h-24 transform rotate-45 rounded-full bg-gray animate-meteor-slow" style="animation: meteorFallSlow 1s linear infinite;"></div>
+            <div class="w-[0.2px] h-36 transform rotate-45 rounded-full bg-gray animate-meteor" style="animation: meteorFall 2s linear infinite;"></div>
+            <div class="w-[0.2px] h-6 transform rotate-45 rounded-full bg-blue animate-meteor-fast" style="animation: meteorFallFast 1s linear infinite;"></div>
+            <div class="w-[0.2px] h-16 transform rotate-45 rounded-full bg-yellow animate-meteor-slow" style="animation: meteorFallSlow 3s linear infinite;"></div>
+        </div>
+        <div class="relative z-10 pt-30 md:pt-0">
+            <div class="absolute animate-[spin_8s_linear_infinite] pointer-events-none right-0 w-1/3 border-b rounded-full -top-1/2 aspect-square border-blue/50"></div>
+            <div class="absolute animate-[spin_6s_linear_infinite] pointer-events-none right-0 w-1/2 border-b rounded-full -top-1/2 aspect-square border-red/50"></div>
+            <div class="absolute animate-[spin_4s_linear_infinite] pointer-events-none right-0 w-2/3 border-b rounded-full -top-1/2 aspect-square border-orange/50"></div>
+            <div class="absolute animate-[spin_2s_linear_infinite] pointer-events-none right-0 w-full border-b rounded-full -top-1/2 aspect-square border-yellow/50"></div>
+        </div>
+        <div class="absolute pointer-events-none z-10 inset-0 bg-dot [mask-image:linear-gradient(to_bottom,transparent,white)]"></div>
+        <div class="container relative max-w-4xl px-4 mt-12 py-11 lg:px-0">
+            <div class="absolute flex flex-row items-center justify-center space-x-1 top-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="p-0.5 rounded-full text-heading bg-red/40" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                    <path d="M12 9h.01"></path>
+                    <path d="M11 12h1v4h1"></path>
+                </svg>
+                <h1 class="px-3 py-1 text-sm normal-case rounded-full text-heading bg-red/40">Ops.. This page is under maintenance!</h1>
+            </div>
+            <div class="grid items-center grid-cols-1 gap-0 md:gap-2 md:grid-cols-2 gap-y-6 md:gap-y-0">
+                <div class="relative flex flex-col w-full h-full pointer-events-none">
+                    <div class="absolute w-32 h-32 transition duration-150 ease-in rounded-full -top-6 -left-12 bg-orange/20"></div>
+                    <h1 class="z-10 text-5xl font-extrabold tracking-normal opacity-100 text-heading text-start">Hey there,<br>welcome back.</h1>
+                    <div class="z-10 py-4 lg:max-w-3xl md:max-w-2xl text-start">
+                        <p class="text-sm font-normal leading-relaxed text-paragraf md:md:text-base md:leading-[1.70rem]">
+                            Hello, <span class="font-bold text-orange">I'm Burhan</span>. I'm 23 years old, and I've just graduated from a private university in Yogyakarta. My passion lies in Mobile App Development,
+                            and I also have some knowledge of web app development. I deeply appreciate the core principles of User Interface and User Experience when designing concepts.
+                            Moreover, I often engage with the <span class="font-bold text-heading/70">Terminal</span> environment, as <span class="font-bold text-heading/70">Linux</span> is my chosen operating system.
+                        </p>
+                    </div>
+                    <div class="z-20 flex flex-row items-center space-x-4 pointer-events-auto">
+                        <a href="https://www.linkedin.com/in/04burhanuddin" target="_blank" class="link">
+                            <div draggable="false" aria-labelledby="title" class="relative group">
+                                <div class="flex flex-col items-center justify-center px-4 py-1.5 border border-gray/50 bg-black bg-transparent rounded-3xl">
+                                    <span class="text-sm font-medium transition text-heading group-hover:text-white">Hire Me</span>
+                                </div>
+                                <div class="w-full absolute inset-0 bg-blue/60 rounded-2xl motion-safe:transition-[clip-path] motion-safe:duration-500 ease-in [clip-path:circle(20%_at_120%_120%)] group-hover:[clip-path:circle(170%_at_120%_120%)]" aria-hidden="true"></div>
+                            </div>
+                        </a>
+                        <form method="get" action="/404.html" target="_parent">
+                            <button class="z-20 justify-center link py-2 text-xs font-medium md:py-2.5 md:text-sm transition duration-200 text-blue hover:text-orange">
+                                Download cv
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div x-data="{ flipped: false }" class="relative focus:outline-none z-20 mt-2 ml-0 font-bold md:h-[22rem] h-80 md:ml-4 rounded-3xl md:mt-0">
+                    <div x-show.transition.scale.5.duration.400ms="!flipped" class="relative py-4 px-5 md:px-6 flex flex-col justify-between w-full bg-black border md:h-[22rem] h-80 focus:outline-none rounded-3xl border-gray/20" @click="flipped = true;">
+                        <div class="flex flex-row items-center pointer-events-none">
+                            <div class="flex flex-row space-x-1">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green"></div>
+                            </div>
+                            <div class="flex flex-row items-center ml-20 space-x-1 md:ml-28">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M5 7l5 5l-5 5"></path>
+                                    <path d="M13 17l6 0"></path>
+                                </svg>
+                                <h1 class="text-xs text-heading">tech.stack</h1>
+                            </div>
+                        </div>
+                        <div class="relative text-sm pointer-events-none">
+                            <div class="flex flex-col space-y-3 duration-150 md:space-y-4 animate-pulse">
+                                <div class="flex flex-row space-x-2">
+                                    <div class="w-10 h-1 bg-transparent rounded-full"></div>
+                                    <div class="w-5 h-1 rounded-full bg-blue"></div>
+                                    <div class="w-10 h-1 rounded-full bg-red"></div>
+                                </div>
+                                <div class="w-5 h-1 rounded-full bg-red"></div>
+                                <div class="w-5 h-1 bg-transparent rounded-full"></div>
+                                <div class="flex flex-row space-x-2">
+                                    <div class="w-10 h-1 rounded-full bg-yellow"></div>
+                                    <div class="w-32 h-1 rounded-full bg-red"></div>
+                                    <div class="w-20 h-1 bg-transparent rounded-full"></div>
+                                    <div class="w-10 h-1 rounded-full bg-gray"></div>
+                                </div>
+                                <div class="flex flex-row space-x-2">
+                                    <div class="w-32 h-1 bg-transparent rounded-full"></div>
+                                    <div class="w-10 h-1 rounded-full bg-aqua"></div>
+                                    <div class="w-20 h-1 rounded-full bg-green"></div>
+                                    <div class="w-10 h-1 bg-transparent rounded-full"></div>
+                                </div>
+                                <div class="flex flex-row space-x-2">
+                                    <div class="h-21w-24 bg-[#CC241D] rounded-full"></div>
+                                    <div class="w-24 h-1 bg-transparent rounded-full"></div>
+                                    <div class="h-1 w-24 bg-[#BDAE93] rounded-full"></div>
+                                </div>
+                                <div class="flex flex-row space-x-2">
+                                    <div class="w-32 h-1 bg-transparent rounded-full"></div>
+                                    <div class="w-10 h-1 rounded-full bg-blue"></div>
+                                    <div class="w-10 h-1 rounded-full bg-yellow"></div>
+                                </div>
+                                <div class="flex flex-row space-x-2">
+                                    <div class="w-10 h-1 rounded-full bg-blue"></div>
+                                    <div class="w-10 h-1 rounded-full bg-yellow"></div>
+                                </div>
+                                <div class="flex flex-row space-x-2">
+                                    <div class="w-32 h-1 rounded-full bg-blue"></div>
+                                    <div class="w-10 h-1 rounded-full bg-yellow"></div>
+                                </div>
+                                <div class="flex flex-row space-x-2">
+                                    <div class="h-1 bg-transparent rounded-full w-28"></div>
+                                    <div class="w-32 h-1 rounded-full bg-orange"></div>
+                                    <div class="w-10 h-1 rounded-full bg-red"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-row items-center justify-center w-full space-x-2 overflow-hidden pointer-events-none bottom-8 md:space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray/70 md:h-7 md:w-7" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 10l0 6"></path>
+                                <path d="M20 10l0 6"></path>
+                                <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0"></path>
+                                <path d="M8 3l1 2"></path>
+                                <path d="M16 3l-1 2"></path>
+                                <path d="M9 18l0 3"></path>
+                                <path d="M15 18l0 3"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-gray/70" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 0.0745342C10.95 2.68323 10.275 4.32298 9.075 6.85714C9.825 7.67702 10.725 8.57143 12.15 9.54037C10.575 8.9441 9.525 8.27329 8.775 7.60248C7.2 10.8075 4.8 15.2795 0 24C3.75 21.764 6.75 20.4224 9.525 19.9006C9.375 19.3789 9.3 18.8571 9.3 18.2609V18.1863C9.375 15.7267 10.65 13.8634 12.15 14.0124C13.65 14.087 14.85 16.1739 14.775 18.6335L14.625 19.9006C17.325 20.4224 20.25 21.8385 24 23.9255L21.975 20.1988C21 19.4534 19.95 18.4845 17.85 17.3665C19.275 17.7391 20.325 18.1863 21.15 18.6335C14.7 6.78261 14.175 5.21739 12 0V0.0745342Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray/70" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray/70 md:h-7 md:w-7" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                <path d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                                <path d="M12 15v-6"></path>
+                                <path d="M15 11l-2 -2"></path>
+                                <path d="M11 7l-1.9 -1.9"></path>
+                                <path d="M10.5 20.4l-6.9 -6.9c-.781 -.781 -.781 -2.219 0 -3l6.9 -6.9c.781 -.781 2.219 -.781 3 0l6.9 6.9c.781 .781 .781 2.219 0 3l-6.9 6.9c-.781 .781 -2.219 .781 -3 0z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray/70 md:h-7 md:w-7" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M16 3v18l4 -2.5v-13z"></path>
+                                <path d="M9.165 13.903l-4.165 3.597l-2 -1l4.333 -4.5m1.735 -1.802l6.932 -7.198v5l-4.795 4.141"></path>
+                                <path d="M16 16.5l-11 -10l-2 1l13 13.5"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray/70 md:h-7 md:w-7" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 14l-3 -3l8 -8h6z"></path>
+                                <path d="M14 21l-5 -5l5 -5h5l-5 5l5 5z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray/70 md:h-7 md:w-7" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4.53 17.05l6.15 -11.72h-.02c.38 -.74 1.28 -1.02 2.01 -.63c.26 .14 .48 .36 .62 .62l1.06 2.01"></path>
+                                <path d="M15.47 6.45c.58 -.59 1.53 -.59 2.11 -.01c.22 .22 .36 .5 .41 .81l1.5 9.11c.1 .62 -.2 1.24 -.76 1.54l-6.07 2.9c-.46 .25 -1.01 .26 -1.46 0l-6.02 -2.92c-.55 -.31 -.85 -.92 -.75 -1.54l1.96 -12.04c.12 -.82 .89 -1.38 1.7 -1.25c.46 .07 .87 .36 1.09 .77l1.24 1.76">
+                                </path>
+                                <path d="M4.57 17.18l10.93 -10.68"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray/70 md:h-7 md:w-7" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M15 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M6 3m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z"></path>
+                                <path d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div x-show.transition.scale.5.duration.400ms="flipped" class="relative focus:outline-none hover:outline-none overflow-hidden border md:h-[22rem] h-80 rounded-3xl dark:border-gray/50 border-gray/20" @click="flipped = false;">
+                        <div class="absolute z-10 flex flex-row items-center space-x-1 md:top-4 md:left-4 left-2 top-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="px-1 py-1 rounded-full text-heading bg-black/50" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                <path d="M12 9h.01"></path>
+                                <path d="M11 12h1v4h1"></path>
+                            </svg>
+                            <h1 class="px-3 py-1 text-xs normal-case rounded-full bg-black/50 text-heading">Yes this me 😂</h1>
+                        </div>
+                        <div class="absolute z-10 flex flex-row items-center space-x-1 md:bottom-4 md:right-4 right-2 bottom-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="px-1 py-1 rounded-full text-heading bg-black/50" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                            </svg>
+                            <h1 class="px-3 py-1 text-xs normal-case rounded-full bg-black/50 text-heading">Borobudur Temple</h1>
+                        </div>
+                        <img class="bg-center bg-cover -z-10" src="/assets/profile/me.webp" alt="Burhanuddin" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container relative max-w-4xl px-4 py-10 lg:px-0 md:px-6 md:py-4 lg:py-10">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div class="w-full h-full pt-0 md:pt-8">
+                <h1 class="text-2xl font-bold tracking-normal text-heading lg:text-3xl">How can, i help your business.</h1>
+                <p class="mt-2 text-sm leading-normal text-paragraf">I can assist you in developing the premature business ideas that you possess.</p>
+            </div>
+            <div class="w-full h-full border rounded-2xl border-blue/5 bg-blue/5">
+                <div draggable="false" aria-labelledby="title" class="relative h-full group">
+                    <div class="flex flex-col items-center justify-center p-6 pointer-events-none">
+                        <div class="rounded-full ring-8 ring-blue/10">
+                            <div class="rounded-full w-max ring-4 ring-blue/20 bg-blue/75">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 p-2 fill-blue">
+                                    <path fill="none" d="M0 0H24V24H0z" />
+                                    <path d="M11 2c4.068 0 7.426 3.036 7.934 6.965l2.25 3.539c.148.233.118.58-.225.728L19 14.07V17c0 1.105-.895 2-2 2h-1.999L15 22H6v-3.694c0-1.18-.436-2.297-1.244-3.305C3.657 13.631 3 11.892 3 10c0-4.418 3.582-8 8-8zm-.53 5.763c-.684-.684-1.792-.684-2.475 0-.684.683-.684 1.791 0 2.474L11 13.243l3.005-3.006c.684-.683.684-1.791 0-2.474-.683-.684-1.791-.684-2.475 0l-.53.53-.53-.53z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h1 class="py-2 mt-2 text-sm font-semibold md:text-md text-heading">Android Development</h1>
+                        <p class="text-sm text-center text-paragraf">Focus on fast, responsive, and intuitive mobile app development to enhance user experience across various platforms.</p>
+                    </div>
+                    <div class="absolute inset-0 bg-blue/10 rounded-2xl motion-safe:transition-[clip-path] motion-safe:duration-500 ease-in [clip-path:circle(20%_at_120%_120%)] group-hover:[clip-path:circle(170%_at_120%_120%)]" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="w-full h-full border rounded-2xl border-orange/5 bg-orange/5">
+                <div draggable="false" aria-labelledby="title" class="relative h-full group">
+                    <div class="flex flex-col items-center justify-center p-6 pointer-events-none">
+                        <div class="rounded-full ring-8 ring-orange/10">
+                            <div class="rounded-full w-max ring-4 ring-orange/20 bg-orange/75">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 p-2 fill-orange">
+                                    <path fill="none" d="M0 0H24V24H0z" />
+                                    <path d="M11 2c4.068 0 7.426 3.036 7.934 6.965l2.25 3.539c.148.233.118.58-.225.728L19 14.07V17c0 1.105-.895 2-2 2h-1.999L15 22H6v-3.694c0-1.18-.436-2.297-1.244-3.305C3.657 13.631 3 11.892 3 10c0-4.418 3.582-8 8-8zm-.53 5.763c-.684-.684-1.792-.684-2.475 0-.684.683-.684 1.791 0 2.474L11 13.243l3.005-3.006c.684-.683.684-1.791 0-2.474-.683-.684-1.791-.684-2.475 0l-.53.53-.53-.53z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h1 class="py-2 mt-2 text-sm font-semibold md:text-md text-heading">UI Design</h1>
+                        <p class="text-sm text-center text-paragraf">Enhance the visual appeal and functionality of your products with the best UI design, personalized to align with your brand.</p>
+                    </div>
+                    <div class="absolute inset-0 bg-orange/10 rounded-2xl motion-safe:transition-[clip-path] motion-safe:duration-500 ease-in [clip-path:circle(20%_at_120%_120%)] group-hover:[clip-path:circle(170%_at_120%_120%)]" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="certificate" class="relative">
+        <div class="absolute pointer-events-none -z-10 inset-0 bg-grid-dark [mask-image:linear-gradient(black,rgba(255,0,0,0))]"></div>
+        <div class="container w-full max-w-4xl px-4 py-10 lg:px-0 lg:py-10">
+            <div class="flex flex-col items-start md:items-center">
+                <div class="flex flex-row items-center justify-start pb-8 space-x-4 md:pb-10 md:justify-center">
+                    <div class="flex justify-center w-fit">
+                        <span class="inline-block w-10 h-0.5 rounded-full bg-paragraf"></span>
+                        <span class="inline-block mx-1 w-1 h-0.5 rounded-full bg-paragraf"></span>
+                    </div>
+                    <span class="text-xs font-semibold tracking-widest text-center uppercase text-paragraf">Course Certificate</span>
+                </div>
+                <div class="grid grid-cols-1 gap-2 -mx-4 md:grid-cols-2">
+                    <div class="grid grid-cols-1 gap-y-2 h-fit">
+                        <div class="w-full p-4 transition ease-in-out h-max group rounded-2xl hover:bg-gray/5">
+                            <div class="flex flex-row space-x-2 item-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5 text-orange">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                                </svg>
+                                <h1 class="text-sm font-semibold md:text-base text-heading link">Information Security Context and Introduction</h1>
+                            </div>
+                            <div class="pl-1">
+                                <p class="py-1 text-sm leading-relaxed text-paragraf">
+                                    The course concludes with a discussion around a simple model of the information security industry and explores the basic skills, knowledge of
+                                    cybersecurity, cryptography, information security (INFOSEC) and security management.
+                                </p>
+                                <div>
+                                    <span class="text-sm text-paragraf">Complete, Jan 27 2021
+                                        <a class="text-sm font-medium transition link font-preahvihear text-blue hover:text-orange" href="https://www.coursera.org/account/accomplishments/certificate/ABQZZ3K8TMFY" target="_blank">Coursera</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full p-4 transition ease-in-out h-max group rounded-2xl hover:bg-gray/5">
+                            <div class="flex flex-row space-x-2 item-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5 text-orange">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                                </svg>
+                                <h1 class="text-sm font-semibold md:text-base link text-heading">Introduction To Cybersecurity</h1>
+                            </div>
+                            <div class="pl-1">
+                                <p class="py-1 text-sm leading-relaxed text-paragraf">
+                                    Introductory knowledge of cybersecurity, including the global implications of cyberthreats to the industry, and why cybersecurity is a growing
+                                    profession. Understand vulnerability and threat detection and defense as well as insight into the opportunities available by pursuing cybersecurity
+                                    certification.
+                                </p>
+                                <div>
+                                    <span class="text-sm text-paragraf">Complete, Jan 27 2021
+                                        <a class="text-sm font-medium transition link font-preahvihear text-blue hover:text-orange" href="https://www.credly.com/badges/4acb7936-7b72-40cc-b196-2c9fa24be1fd?source=linked_in_profile" target="_blank">Cisco Network Academy</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-y-2 h-fit">
+                        <div class="w-full p-4 transition ease-in-out h-max group rounded-2xl hover:bg-gray/5">
+                            <div class="flex flex-row space-x-2 item-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5 text-orange">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                                </svg>
+                                <h1 class="text-sm font-semibold md:text-base text-heading link">Introduction To Data Analytic For Business</h1>
+                            </div>
+                            <div class="pl-1">
+                                <p class="py-1 text-sm leading-relaxed text-paragraf">
+                                    This course will expose you to the data analytics practices executed in the business world. We will explore such key areas as the analytical
+                                    process, how data is created, stored, accessed, and how the organization works with data and creates the environment in which analytics can
+                                    flourish.
+                                </p>
+                                <div>
+                                    <span class="text-sm text-paragraf">Complete, Jan 28 2021
+                                        <a class="text-sm font-medium transition link font-preahvihear text-blue hover:text-orange" href="https://www.coursera.org/account/accomplishments/certificate/9XSFL5MLM5BD" target="_blank"> Coursera</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full p-4 transition ease-in-out h-max group rounded-2xl hover:bg-gray/5">
+                            <div class="flex flex-row space-x-2 item-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5 text-orange">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                                </svg>
+                                <h1 class="text-sm font-semibold md:text-base text-heading link">Introduction To Big Data</h1>
+                            </div>
+                            <div class="pl-1">
+                                <p class="py-1 text-sm leading-relaxed text-paragraf">
+                                    Understanding of basic knowledge about big data, Apache Hadoop, Mapreduce and Cloudera.
+                                </p>
+                                <div>
+                                    <span class="text-sm text-paragraf">Complete, Oct 7 2021
+                                        <a class="text-sm font-medium transition link font-preahvihear text-blue hover:text-orange" href="https://www.coursera.org/account/accomplishments/certificate/E89YLTWSUJBJ" target="_blank"> Coursera</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="project" class="relative">
+        <div class="absolute z-10 pointer-events-none inset-0 bg-[url(/assets/section/dot.svg)] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+        <div class="container relative z-20 max-w-4xl px-4 py-10 lg:px-0 md:py-10 lg:py-10">
+            <div class="flex flex-row items-center justify-start space-x-1 md:justify-center">
+                <div class="flex justify-center w-fit">
+                    <span class="inline-block w-10 h-0.5 rounded-full bg-paragraf"></span>
+                    <span class="inline-block mx-1 w-1 h-0.5 rounded-full bg-paragraf"></span>
+                </div>
+                <p class="text-xs font-semibold tracking-widest text-center uppercase text-paragraf">Project Overview</p>
+            </div>
+            <div x-data="{ activeTab: 'android' }">
+                <div class="flex items-center justify-center py-8">
+                    <div class="rounded-full ring-1 w-fit ring-gray/30 bg-orange/5">
+                        <div class="flex p-0.5 text-heading/50">
+                            <div @click.prevent="activeTab = 'android'" :class="{ 'active bg-orange text-white rounded-full px-4' :activeTab === 'android' }" class="px-5 py-1.5 text-sm transition rounded-3xl duration-150 ease-out link font-medium lg:hover:bg-orange/20 hover:text-white">Mobile</div>
+                            <div @click.prevent="activeTab = 'web'" :class="{ 'active bg-orange text-white rounded-full px-4' :activeTab === 'web' }" class="px-5 py-1.5 text-sm transition rounded-3xl duration-150 ease-out link font-medium lg:hover:bg-orange/20 hover:text-white">Web</div>
+                            <div @click.prevent="activeTab = 'others'" :class="{ 'active bg-orange text-white rounded-full px-4' :activeTab === 'others' }" class="px-5 py-1.5 text-sm transition rounded-3xl duration-150 ease-out link font-medium lg:hover:bg-orange/20 hover:text-white">Others</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div x-cloak x-show="activeTab === 'android'">
+                        <div>
+                            <div class="grid grid-cols-1 md:grid-cols-2">
+                                <div class="w-full h-full border-l border-dashed border-gray/50 md:border-l-0">
+                                    <div class="relative flex flex-col pl-3 md:pl-0 md:pr-6">
+                                        <div class="z-10 w-full overflow-hidden border md:h-72 h-fit hover:z-20 border-yellow/60">
+                                            <img class="object-cover object-center w-full h-full" src="/assets/project/mandar_trip/1.webp" alt="mandar trip" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-full pt-6 border-l border-dashed md:pt-0 border-gray/50">
+                                    <ol class="relative">
+                                        <li class="pl-3 md:pl-6">
+                                            <span class="absolute flex items-center justify-center w-2 h-2 mt-2 rounded-full -left-1 ring-2 ring-yellow/25 bg-yellow"></span>
+                                            <div class="-mt-2">
+                                                <h3 class="flex items-center mb-1 text-base font-semibold text-heading">Mandar Trip
+                                                    <span class="px-2.5 py-0.5 mr-2 ml-3 text-xs font-medium rounded-xl bg-blue text-heading">Latest v.2</span>
+                                                </h3>
+                                                <h6 class="flex items-center py-2 text-sm text-heading">Released on Mar 6, 2023
+                                                    <a href="404.html" class="flex flex-row px-2 py-0.5 mr-1 ml-3 space-x-1 rounded-xl cursor-not-allowed bg-yellow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm.002 7a2 2 0 0 0 -1.995 1.85l-.005 .15l.005 .15a2 2 0 0 0 .995 1.581v1.769l.007 .117a1 1 0 0 0 1.993 -.117l.001 -1.768a2 2 0 0 0 -1.001 -3.732z" stroke-width="0" fill="currentColor"></path>
+                                                        </svg>
+                                                        <p class="text-xs font-medium text-heading">Github</p>
+                                                    </a>
+                                                </h6>
+                                                <p class="mb-4 text-sm font-normal text-paragraf">A tourism information system in Polewali Mandar district using LBS Location Based Service. The
+                                                    application can display detailed tourist coordinates and direction/polylines to go to tourist attractions based on the user's location.</p>
+                                                <ul class="pb-3 pl-3 list-disc list-outside text-paragraf">
+                                                    <li class="mb-0.5 text-sm font-normal">Android Apps</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Flutter/Dart, State Management Get X</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Firebase (Storage, Authentication, Firestore)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Google Maps API (Maps SDK Android/IOS & Direction API)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Third Party Library (Gelocator, Google Maps, Location)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Location User Realtime</li>
+                                                    <li class="mb-0.5 text-sm font-normal">14 Total Page Application</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Feature Admin (CURD Object Wisata & add Admin)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Feature User (Rute Wisata, Logout, Login, Verification Email, Forgot Password)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Support Dark/Light Mode</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2">
+                                <div class="w-full h-full pt-8 border-l border-dashed md:pt-10 border-gray/50 md:border-l-0">
+                                    <div class="relative flex flex-col pl-3 md:pl-0 md:pr-6">
+                                        <div class="z-10 w-full overflow-hidden border md:h-72 h-fit hover:z-20 border-yellow/60">
+                                            <img class="object-cover object-center w-full h-full" src="/assets/project/read_news/1.webp" alt="read news" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-full pt-6 border-l border-dashed md:pt-10 border-gray/50">
+                                    <ol class="relative">
+                                        <li class="pl-3 md:pl-6">
+                                            <span class="absolute flex items-center justify-center w-2 h-2 mt-2 rounded-full -left-1 ring-2 ring-yellow/25 bg-yellow"></span>
+                                            <div class="-mt-2">
+                                                <h3 class="flex items-center mb-1 text-base font-semibold text-heading">Read New Today
+                                                    <span class="px-2.5 py-0.5 mr-2 ml-3 text-xs font-medium rounded-xl bg-blue text-heading">Latest v.2</span>
+                                                </h3>
+                                                <h6 class="flex items-center py-2 text-sm text-heading">Released on Mar 6, 2023
+                                                    <a href="https://github.com/04burhanuddin/Read-News-Today" target="_blank" class="flex flex-row px-2 py-0.5 mr-1 ml-3 space-x-1 rounded-xl bg-yellow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                            <path d="M3.6 9h16.8"></path>
+                                                            <path d="M3.6 15h16.8"></path>
+                                                            <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                                                            <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+                                                        </svg>
+                                                        <p class="text-xs font-medium text-heading">Github</p>
+                                                    </a>
+                                                </h6>
+                                                <p class="mb-4 text-sm font-normal text-paragraf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste exercitationem animi laboriosam ullam
+                                                    dicta libero porro nostrum odit esse dolores.</p>
+                                                <ul class="pb-3 list-disc list-inside text-paragraf">
+                                                    <li class="mb-0.5 text-sm font-normal">Only Android</li>
+                                                    <li class="mb-0.5 text-sm font-normal">News API</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Flutter</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Dio</li>
+                                                    <li class="mb-0.5 text-sm font-normal">8 Total Pages</li>
+                                                    <li class="mb-0.5 text-sm font-normal">SDK sdk: ">=2.3.2 < 3.0.0" </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2">
+                                <div class="w-full h-full pt-8 border-l border-dashed md:pt-14 border-gray/50 md:border-l-0">
+                                    <div class="relative flex flex-col pl-3 md:pl-0 md:pr-6">
+                                        <div class="z-10 w-full overflow-hidden border h-fit lg:h-72 hover:z-20 border-yellow/60">
+                                            <img src="/assets/project/covid_flutter/1.webp" alt="covid flutter" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-full pt-6 border-l border-dashed md:pt-14 border-gray/50">
+                                    <ol class="relative">
+                                        <li class="pl-3 md:pl-6">
+                                            <span class="absolute flex items-center justify-center w-2 h-2 mt-2 rounded-full -left-1 ring-2 ring-yellow/25 bg-yellow"></span>
+                                            <div class="-mt-2">
+                                                <h3 class="flex items-center mb-1 text-base font-semibold text-heading">Covid-19 Flutter
+                                                    <span class="px-2.5 py-0.5 mr-2 ml-3 text-xs font-medium rounded-xl bg-blue text-heading">Latest v.2</span>
+                                                </h3>
+                                                <h6 class="flex items-center py-2 text-sm text-heading">Released on Mar 6, 2023
+                                                    <a href="https://github.com/04burhanuddin/Covid_Indonesia-Flutter-Null_Safety" target="_blank" class="flex flex-row px-2 py-0.5 mr-1 ml-3 space-x-1 rounded-xl bg-yellow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                            <path d="M3.6 9h16.8"></path>
+                                                            <path d="M3.6 15h16.8"></path>
+                                                            <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                                                            <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+                                                        </svg>
+                                                        <p class="text-xs font-medium text-heading">Github</p>
+                                                    </a>
+                                                </h6>
+                                                <p class="mb-4 text-sm font-normal text-paragraf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste exercitationem animi laboriosam ullam
+                                                    dicta libero porro nostrum odit esse dolores.</p>
+                                                <ul class="pb-3 list-disc list-inside text-paragraf">
+                                                    <li class="mb-0.5 text-sm font-normal">Only Android</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Flutter 2.2.4 Stable</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Dio</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Flutter SVG</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Google Fonts</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Flutter Native Splash</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2">
+                                <div class="w-full h-full pt-8 border-l border-dashed md:pt-14 border-gray/50 md:border-l-0">
+                                    <div class="relative flex flex-col pl-3 md:pl-0 md:pr-6">
+                                        <div class="z-10 w-full overflow-hidden border h-fit lg:h-72 hover:z-20 border-yellow/60">
+                                            <img src="/assets/project/covid_kotlin/1.webp" alt="covid kotlin" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-full pt-6 border-l border-dashed md:pt-14 border-gray/50">
+                                    <ol class="relative">
+                                        <li class="pl-3 md:pl-6">
+                                            <span class="absolute flex items-center justify-center w-2 h-2 mt-2 rounded-full -left-1 ring-2 ring-yellow/25 bg-yellow"></span>
+                                            <div class="-mt-2">
+                                                <h3 class="flex items-center mb-1 text-base font-semibold text-heading">Covid-19 Kotlin
+                                                    <span class="px-2.5 py-0.5 mr-2 ml-3 text-xs font-medium rounded-xl bg-blue text-heading">Latest v.2</span>
+                                                </h3>
+                                                <h6 class="flex items-center py-2 text-sm text-heading">Released on Mar 6, 2023
+                                                    <a href="https://github.com/04burhanuddin/Mobile-Dashboard-Coronavirus-LiveData" target="_blank" class="flex flex-row px-2 py-0.5 mr-1 ml-3 space-x-1 rounded-xl bg-yellow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                            <path d="M3.6 9h16.8"></path>
+                                                            <path d="M3.6 15h16.8"></path>
+                                                            <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                                                            <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+                                                        </svg>
+                                                        <p class="text-xs font-medium text-heading">Github</p>
+                                                    </a>
+                                                </h6>
+                                                <p class="mb-4 text-sm font-normal text-paragraf">A tourism information system in Polewali Mandar district using LBS Location Based Service. The
+                                                    application can display detailed tourist coordinates and direction/polylines to go to tourist attractions based on the user's location.</p>
+                                                <ul class="pl-3 list-disc list-outside text-paragraf">
+                                                    <li class="mb-0.5 text-sm font-normal">Android Apps</li>
+                                                    <li class="mb-0.5 text-sm font-normal">API From Kawal Corona</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Android Studio v4.1.1</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Kotlin v1.4.21</li>
+                                                    <li class="mb-0.5 text-sm font-normal">3 Total Activity (Splash, indonesiaData, globalData)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Retrofit v2.3.2</li>
+                                                    <li class="text-sm font-normal">Use Model View Binding</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="activeTab === 'web'">
+                        <div>
+                            <div class="grid grid-cols-1 md:grid-cols-2">
+                                <div class="relative w-full border-l border-dashed h-fit border-yellow/50 md:border-l-0">
+                                    <div class="relative flex flex-col pl-3 md:pl-0 md:pr-6">
+                                        <div class="z-10 w-full overflow-hidden border h-fit hover:z-20 border-yellow">
+                                            <img class="pointer-events-none" src="/assets/project/ksu_samasundu/2.webp" alt="KSU tuang langngarang" loading="lazy">
+                                        </div>
+                                        <div class="absolute z-10 overflow-hidden border lg:right-6 lg:-ml-6 lg:mr-6 hover:z-20 h-fit top-28 border-yellow">
+                                            <img class="pointer-events-none" src="/assets/project/ksu_samasundu/1.webp" alt="KSU tuang langngarang" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-full border-l border-dashed pt-28 md:pt-0 border-yellow/50">
+                                    <ol class="relative">
+                                        <li class="pl-3 md:pl-6">
+                                            <span class="absolute flex items-center justify-center w-2 h-2 mt-2 rounded-full -left-1 ring-2 ring-yellow/25 bg-yellow"></span>
+                                            <div class="-mt-2">
+                                                <h3 class="flex items-center mb-1 text-base font-semibold text-heading">KSU Tuang Langngarang
+                                                    <span class="px-2.5 py-0.5 mr-2 ml-3 text-xs font-medium rounded-xl bg-blue text-heading">Latest v.2</span>
+                                                </h3>
+                                                <h6 class="flex items-center py-2 text-sm text-heading">Released on Mar 6, 2023
+                                                    <a href="404.html" class="flex flex-row px-2 py-0.5 mr-1 ml-3 space-x-1 rounded-xl cursor-not-allowed bg-yellow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm.002 7a2 2 0 0 0 -1.995 1.85l-.005 .15l.005 .15a2 2 0 0 0 .995 1.581v1.769l.007 .117a1 1 0 0 0 1.993 -.117l.001 -1.768a2 2 0 0 0 -1.001 -3.732z" stroke-width="0" fill="currentColor"></path>
+                                                        </svg>
+                                                        <p class="text-xs font-medium text-heading">Github</p>
+                                                    </a>
+                                                </h6>
+                                                <p class="mb-4 text-sm font-normal text-paragraf">The website created provides comprehensive information about cooperatives. The main objective of this
+                                                    project is to introduce cooperatives to the public, prospective members, business partners, and other related parties.</p>
+                                                <ul class="pb-3 list-disc list-inside text-paragraf">
+                                                    <li class="mb-0.5 text-sm font-normal">Web Application</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Laravel v.10</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Mysql</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Jetstream, Liveware, Alpine Js, Tailwind Css V.3, Javascript</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Dashboard Admin</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Responsive Design (Mobile, Tablet and Desktop)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Support Dark/Light Mode</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Deployment (git, github, web hosting)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Link: <a href="http://ksutuanglangngarang.com">ksu</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2">
+                                <div class="w-full h-full pt-8 border-l border-dashed md:pt-10 border-yellow/50 md:border-l-0">
+                                    <div class="relative flex flex-col pl-3 md:pl-0 md:pr-6">
+                                        <div class="z-10 w-full overflow-hidden border bg-orange h-fit lg:h-72 hover:z-20 border-yellow">
+                                            <img class="object-cover w-full h-full" src="/assets/project/portfolio/1.webp" alt="web portfolio" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-full pt-6 border-l border-dashed md:pt-10 border-yellow/50">
+                                    <ol class="relative">
+                                        <li class="pl-3 md:pl-6">
+                                            <span class="absolute flex items-center justify-center w-2 h-2 mt-2 rounded-full -left-1 ring-2 ring-yellow/25 bg-yellow"></span>
+                                            <div class="-mt-2">
+                                                <h3 class="flex items-center mb-1 text-base font-semibold text-heading">My Portfolio
+                                                    <span class="px-2.5 py-0.5 mr-2 ml-3 text-xs font-medium rounded-xl bg-blue text-heading">Latest v.2</span>
+                                                </h3>
+                                                <h6 class="flex items-center py-2 text-sm text-heading">Released on Jun 07, 2023
+                                                    <a href="https://github.com/04burhanuddin/04burhanuddin.github.io" target="_blank" class="flex flex-row px-2 py-0.5 mr-1 ml-3 space-x-1 rounded-xl bg-yellow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                            <path d="M3.6 9h16.8"></path>
+                                                            <path d="M3.6 15h16.8"></path>
+                                                            <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                                                            <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+                                                        </svg>
+                                                        <p class="text-xs font-medium text-heading">Github</p>
+                                                    </a>
+                                                </h6>
+                                                <p class="mb-4 text-sm font-normal text-paragraf">A very simple and minimalist website to display the work that I have made, and will always be updated
+                                                    later.</p>
+                                                <ul class="pb-3 pl-3 list-disc list-outside text-paragraf">
+                                                    <li class="mb-0.5 text-sm font-normal">Web</li>
+                                                    <li class="mb-0.5 text-sm font-normal">HTML 5, Tailwind Css v.3.x</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Javascript</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Alpine Js</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Responsive Design (Mobile, Tablet and Desktop)</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2">
+                                <div class="w-full h-full pt-8 border-l border-dashed md:pt-14 border-yellow/50 md:border-l-0">
+                                    <div class="relative flex flex-col pl-3 md:pl-0 md:pr-6">
+                                        <div class="z-10 w-full overflow-hidden border h-fit lg:h-72 hover:z-20 border-yellow">
+                                            <img src="/assets/project/gis_wisata_jepara/1.webp" alt="GIS wisata jepara" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full h-full pt-6 border-l border-dashed md:pt-14 border-yellow/50">
+                                    <ol class="relative">
+                                        <li class="pl-3 md:pl-6">
+                                            <span class="absolute flex items-center justify-center w-2 h-2 mt-2 rounded-full -left-1 ring-2 ring-yellow/25 bg-yellow"></span>
+                                            <div class="-mt-2">
+                                                <h3 class="flex items-center mb-1 text-base font-semibold text-heading">GIS Wisata Jepara
+                                                    <span class="px-2.5 py-0.5 mr-2 ml-3 text-xs font-medium rounded-xl bg-blue text-heading">Latest v.2</span>
+                                                </h3>
+                                                <h6 class="flex items-center py-2 text-sm text-heading">Released on Mar 6, 2023
+                                                    <a href="https://github.com/04burhanuddin/GIS-Wisata-Jepara" target="_blank" class="flex flex-row px-2 py-0.5 mr-1 ml-3 space-x-1 rounded-xl bg-yellow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                            <path d="M3.6 9h16.8"></path>
+                                                            <path d="M3.6 15h16.8"></path>
+                                                            <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                                                            <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+                                                        </svg>
+                                                        <p class="text-xs font-medium text-heading">Github</p>
+                                                    </a>
+                                                </h6>
+                                                <p class="mb-4 text-sm font-normal text-paragraf">A tourism information system in Polewali Mandar district using LBS Location Based Service. The
+                                                    application can display detailed tourist coordinates and direction/polylines to go to tourist attractions based on the user's location.</p>
+                                                <ul class="pb-3 pl-3 list-disc list-outside text-paragraf">
+                                                    <li class="mb-0.5 text-sm font-normal">Web Application</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Laravel V.8, Livewire</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Map Box API (Direction API)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">PWA & SPA</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Mysql, Javascript, Bootstrap</li>
+                                                    <li class="mb-0.5 text-sm font-normal">8 Total Page Application</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Feature Admin (CRUD Object Wisata, Login)</li>
+                                                    <li class="mb-0.5 text-sm font-normal">Feature User (Only Show Rute Tour, Update Location User)</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="activeTab === 'others'">
+                        <div>
+                            <div class="grid gap-4 md:grid-cols-2">
+                                <a href="https://github.com/04burhanuddin/dwm" target="_blank">
+                                    <div class="w-full p-4 bg-black border rounded-2xl h-fit border-gray/10">
+                                        <div class="flex flex-row items-center space-x-2">
+                                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+                                            </svg>
+                                            <h2 class="text-sm font-medium md:text-base text-blue">04burhanuddin/dwm</h2>
+                                        </div>
+                                        <p class="py-4 text-sm text-paragraf">DWM is an extremely fast, small, and Dynamic Window Manager for X. from suckless.org</p>
+                                        <div class="flex flex-row space-x-4">
+                                            <div class="flex items-center space-x-1.5">
+                                                <div class="w-3 h-3 border rounded-full border-gray bg-gray/50"></div>
+                                                <span class="text-sm text-paragraf">C</span>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-2">
+                                                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">MIT License</p>
+                                            </div>
+                                            <div class="flex items-center space-x-1.5">
+                                                <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-1.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"></path>
+                                                    <path d="M12 12l0 4"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/04burhanuddin/dmenu" target="_blank">
+                                    <div class="w-full p-4 bg-black border rounded-2xl h-fit border-gray/10">
+                                        <div class="flex flex-row items-center space-x-2">
+                                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+                                            </svg>
+                                            <h2 class="text-sm font-medium md:text-base text-blue">04burhanuddin/dmenu</h2>
+                                        </div>
+                                        <p class="py-4 text-sm text-paragraf">Dmenu is a dynamic menu for X, originally designed for dwm. It manages large numbers of user-defined menu items efficiently.</p>
+                                        <div class="flex flex-row space-x-4">
+                                            <div class="flex items-center space-x-1.5">
+                                                <div class="w-3 h-3 border rounded-full border-gray bg-gray/50"></div>
+                                                <span class="text-sm text-paragraf">C</span>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-2">
+                                                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">MIT License</p>
+                                            </div>
+                                            <div class="flex items-center space-x-1.5">
+                                                <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-1.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"></path>
+                                                    <path d="M12 12l0 4"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/04burhanuddin/st" target="_blank">
+                                    <div class="w-full p-4 bg-black border rounded-2xl h-fit border-gray/10">
+                                        <div class="flex flex-row items-center space-x-2">
+                                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+                                            </svg>
+                                            <h2 class="text-sm font-medium md:text-base text-blue">04burhanuddin/st</h2>
+                                        </div>
+                                        <p class="py-4 text-sm text-paragraf">ST is a simple terminal emulator for X which sucks less. from suckless.org</p>
+                                        <div class="flex flex-row space-x-4">
+                                            <div class="flex items-center space-x-1.5">
+                                                <div class="w-3 h-3 border rounded-full border-gray bg-gray/50"></div>
+                                                <span class="text-sm text-paragraf">C</span>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-2">
+                                                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">MIT License</p>
+                                            </div>
+                                            <div class="flex items-center space-x-1.5">
+                                                <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-1.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"></path>
+                                                    <path d="M12 12l0 4"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/04burhanuddin/dwmblocks" target="_blank">
+                                    <div class="w-full p-4 bg-black border rounded-2xl h-fit border-gray/10">
+                                        <div class="flex flex-row items-center space-x-2">
+                                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+                                            </svg>
+                                            <h2 class="text-sm font-medium md:text-base text-blue">04burhanuddin/dwmblocks</h2>
+                                        </div>
+                                        <p class="py-4 text-sm text-paragraf">Modular status bar for dwm written in c.</p>
+                                        <div class="flex flex-row space-x-4">
+                                            <div class="flex items-center space-x-1.5">
+                                                <div class="w-3 h-3 border rounded-full border-gray bg-gray/50"></div>
+                                                <span class="text-sm text-paragraf">C</span>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-2">
+                                                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">MIT License</p>
+                                            </div>
+                                            <div class="flex items-center space-x-1.5">
+                                                <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-1.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"></path>
+                                                    <path d="M12 12l0 4"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/04burhanuddin/surf" target="_blank">
+                                    <div class="w-full p-4 bg-black border rounded-2xl h-fit border-gray/10">
+                                        <div class="flex flex-row items-center space-x-2">
+                                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+                                            </svg>
+                                            <h2 class="text-sm font-medium md:text-base text-blue">04burhanuddin/surf</h2>
+                                        </div>
+                                        <p class="py-4 text-sm text-paragraf">surf is a simple Web browser based on WebKit/GTK+</p>
+                                        <div class="flex flex-row space-x-4">
+                                            <div class="flex items-center space-x-1.5">
+                                                <div class="w-3 h-3 border rounded-full border-gray bg-gray/50"></div>
+                                                <span class="text-sm text-paragraf">C</span>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-2">
+                                                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">MIT License</p>
+                                            </div>
+                                            <div class="flex items-center space-x-1.5">
+                                                <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                                    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                            <div class="flex flex-row items-center space-x-1.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                    <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"></path>
+                                                    <path d="M12 12l0 4"></path>
+                                                </svg>
+                                                <p class="text-sm text-paragraf">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="relative">
+        <div class="container max-w-4xl px-4 lg:px-0">
+            <div class="flex flex-col py-10 lg:-mx-2 md:py-10 lg:py-10">
+                <div class="flex flex-row items-center pb-8 space-x-4 md:pb-8 md:justify-center">
+                    <div class="flex justify-center w-fit">
+                        <span class="inline-block w-10 h-0.5 rounded-full bg-gray"></span>
+                        <span class="inline-block mx-1 w-1 h-0.5 rounded-full bg-gray"></span>
+                    </div>
+                    <h1 class="text-xs font-semibold tracking-widest text-center uppercase text-paragraf">Blogs</h1>
+                </div>
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 md:gap-y-4">
+                    <div class="h-max">
+                        <a href="https://github.com/04burhanuddin/Readme-Arch-Linux" target="_blank" class="focus:outline-none">
+                            <div class="w-full p-4 bg-black border rounded-2xl h-fit border-gray/10">
+                                <div class="flex flex-row items-center space-x-2">
+                                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                        <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+                                    </svg>
+                                    <h2 class="text-sm font-medium md:text-base text-blue">04burhanuddin/Readme-Arch-Linux</h2>
+                                </div>
+                                <p class="py-4 text-sm text-paragraf">From Beginner to Expert: Mastering Arch Linux from Scratch! Learn Configuration and Installation, as well as Utilizing the Arch Linux Operating System for Your Coding Needs.</p>
+                                <div class="flex flex-row space-x-4">
+                                    <div class="flex items-center space-x-1.5">
+                                        <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                            <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                                        </svg>
+                                        <p class="text-sm text-paragraf">1</p>
+                                    </div>
+                                    <div class="flex flex-row items-center space-x-1.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"></path>
+                                            <path d="M12 12l0 4"></path>
+                                        </svg>
+                                        <p class="text-sm text-paragraf">0</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="h-max">
+                        <a href="https://github.com/04burhanuddin/Readme-Ubuntu-Linux">
+                            <div class="w-full p-4 bg-black border rounded-2xl h-fit border-gray/10">
+                                <div class="flex flex-row items-center space-x-2">
+                                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                        <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+                                    </svg>
+                                    <h2 class="text-sm font-medium md:text-base text-blue">04burhanuddin/Readme-Ubuntu-Linux</h2>
+                                </div>
+                                <p class="py-4 text-sm text-paragraf">From Novice to Pro: Mastering Ubuntu from Scratch! Explore Configuration and Installation, as well as Harnessing the Ubuntu Operating System for Your Coding Requirements.</p>
+                                <div class="flex flex-row space-x-4">
+                                    <div class="flex items-center space-x-1.5">
+                                        <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                            <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                                        </svg>
+                                        <p class="text-sm text-paragraf">1</p>
+                                    </div>
+                                    <div class="flex flex-row items-center space-x-1.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"></path>
+                                            <path d="M12 12l0 4"></path>
+                                        </svg>
+                                        <p class="text-sm text-paragraf">0</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="h-max">
+                        <a href="https://github.com/04burhanuddin/my-theme-vscode" target="_blank">
+                            <div class="w-full p-4 bg-black border rounded-2xl h-fit border-gray/10">
+                                <div class="flex flex-row items-center space-x-2">
+                                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                        <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+                                    </svg>
+                                    <h2 class="text-sm font-medium md:text-base text-blue">04burhanuddin/Theme-VS-Code</h2>
+                                </div>
+                                <p class="py-4 text-sm text-paragraf">Optimal VS Code Settings for Coding: These configurations are ideal if you prefer utilizing key bindings while working with the VS Code IDE.</p>
+                                <div class="flex flex-row space-x-4">
+                                    <div class="flex items-center space-x-1.5">
+                                        <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="fill-gray">
+                                            <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                                        </svg>
+                                        <p class="text-sm text-paragraf">2</p>
+                                    </div>
+                                    <div class="flex flex-row items-center space-x-1.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                            <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2"></path>
+                                            <path d="M12 12l0 4"></path>
+                                        </svg>
+                                        <p class="text-sm text-paragraf">0</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center w-full bg-black border h-36 md:h-full rounded-2xl border-gray/10">
+                        <h1 class="text-base text-blue animate-pulse">upcoming ...</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute pointer-events-none -z-10 inset-0 bg-grid-dark [mask-image:linear-gradient(black,rgba(255,0,0,0))]"></div>
+    </section>
+    <section id="workstation" class="container z-30 max-w-4xl px-4 py-10 md:px-6 lg:py-10 lg:px-0">
+        <div class="flex flex-row items-center justify-start space-x-1 md:justify-center">
+            <div class="flex justify-center w-fit">
+                <span class="inline-block w-10 h-0.5 rounded-full bg-paragraf"></span>
+                <span class="inline-block mx-1 w-1 h-0.5 rounded-full bg-paragraf"></span>
+            </div>
+            <p class="text-xs font-semibold tracking-widest text-center uppercase text-paragraf">Werkstation</p>
+        </div>
+        <div class="grid justify-center grid-cols-1 gap-4 pt-8 justify-items-center md:grid-cols-2 h-fit">
+            <div class="w-full overflow-hidden md:h-[16rem] h-64 bg-red/10 border-blue/20 border">
+                <img class="transition h-full w-full bg-center duration-300 bg-cover ease-in transform-gpu hover:scale-[1.3]" src="/assets/profile/uses.webp" alt="Desktop environment" loading="lazy">
+            </div>
+            <div class="w-full h-full">
+                <ul class="pl-5 list-disc list-outside md:pl-6 text-paragraf">
+                    <li class="mb-1 text-sm font-normal">Laptop ASUS VivoBook A409JA</li>
+                    <li class="mb-1 text-sm font-normal">OS <a class="transition duration-150 link text-blue hover:text-orange" href="https://archlinux.org/" target="_blank">Arch Linux x86_64</a></li>
+                    <li class="mb-1 text-sm font-normal">Kernal 6.3.7-arch1-1</li>
+                    <li class="mb-1 text-sm font-normal">Theme <a class="transition duration-150 link text-blue hover:text-orange" href="https://aur.archlinux.org/packages/gruvbox-dark-gtk">gruvbox-dark-gtk</a></li>
+                    <li class="mb-1 text-sm font-normal">Shell <a class="transition duration-150 link text-blue hover:text-orange" href="https://ohmyz.sh/" target="_blank">ZSH 5.9</a> + <a class="transition duration-150 link text-blue hover:text-orange" href="https://github.com/04burhanuddin/st.git" target="_blank">ST</a> + <a class="transition duration-150 link text-blue hover:text-orange" href="https://github.com/lsd-rs/lsd" target="_blank">LSDeluxe</a></li>
+                    <li class="mb-1 text-sm font-normal">Window Manager <a class="transition duration-150 link text-blue hover:text-orange" href="https://github.com/04burhanuddin/dwm.git" target="_blank">DWM</a> + <a class="transition duration-150 link text-blue hover:text-orange" href="https://github.com/04burhanuddin/dmenu.git" target="_blank">DMENU</a> </li>
+                    <li class="mb-1 text-sm font-normal">CPU Intel i3-1005G1</li>
+                    <li class="mb-1 text-sm font-normal">GPU Intel Iris Plus Graphics G1</li>
+                    <li class="mb-1 text-sm font-normal">Memory 8 GB</li>
+                    <li class="mb-1 text-sm font-normal">HDD 1 TB + SSD V-GeN Hyper 256 GB M.2 NVMe</li>
+                    <li class="text-sm font-medium">See my tutorial installation <a class="transition duration-150 link text-blue hover:text-orange" href="https://github.com/04burhanuddin/Readme-Arch-Linux" target="_blank">here</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="relative overflow-hidden">
+        <div class="absolute pointer-events-none animate-pulse -z-10 inset-0 bg-dot [mask-image:linear-gradient(to_bottom,transparent,white)]"></div>
+        <div class="container max-w-4xl px-4 py-10 lg:px-0 lg:py-10 md:py-10">
+            <div class="flex flex-row items-center justify-start space-x-1 md:justify-center">
+                <div class="flex justify-center w-fit">
+                    <span class="inline-block w-10 h-0.5 rounded-full bg-paragraf"></span>
+                    <span class="inline-block mx-1 w-1 h-0.5 rounded-full bg-paragraf"></span>
+                </div>
+                <p class="text-xs font-semibold tracking-widest text-center uppercase text-paragraf">Network</p>
+            </div>
+            <div class="grid w-full grid-cols-1 pt-8 gap-y-4 md:grid-cols-4 md:gap-4 md:gap-y-0 md:px-0">
+                <div draggable="false" aria-labelledby="title" class="relative group">
+                    <div class="w-full h-full rounded-2xl bg-gray/10">
+                        <div class="flex flex-row space-x-2 md:p-5">
+                            <div class="px-4 py-5 md:px-0 md:py-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-heading">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z" />
+                                </svg>
+                                <h1 class="pt-4 text-sm font-medium text-heading">Github</h1>
+                                <p class="pt-1 text-xs text-paragraf">Clone, fork and contributing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 h-full bg-gray/20 rounded-2xl motion-safe:transition-[clip-path] motion-safe:duration-500 ease-in [clip-path:circle(10%_at_-10%_10%)] group-hover:[clip-path:circle(170%_at_10%_10%)]">
+                        <a href="https://github.com/04burhanuddin" target="_blank">
+                            <div class="flex flex-row space-x-2 md:p-5">
+                                <div class="px-4 py-5 md:px-0 md:py-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-heading">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z" />
+                                    </svg>
+                                    <h1 class="pt-4 text-sm font-medium text-heading">Github
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-block w-4 h-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0.5 will-change-transform" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l14 0"></path>
+                                            <path d="M15 16l4 -4"></path>
+                                            <path d="M15 8l4 4"></path>
+                                        </svg>
+                                    </h1>
+                                    <p class="pt-1 text-xs text-paragraf">Clone, fork and contributing.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div draggable="false" aria-labelledby="title" class="relative group">
+                    <div class="w-full h-full rounded-2xl bg-blue/10">
+                        <div class="flex flex-row space-x-2 md:p-5">
+                            <div class="px-4 py-5 md:px-0 md:py-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-blue" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                                </svg>
+                                <h1 class="pt-4 text-sm font-medium text-heading">Facebook</h1>
+                                <p class="pt-1 text-xs text-paragraf">Discuss</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 h-full bg-blue/30 rounded-2xl motion-safe:transition-[clip-path] motion-safe:duration-500 ease-in [clip-path:circle(10%_at_-10%_10%)] group-hover:[clip-path:circle(170%_at_10%_10%)]">
+                        <a href="https://www.facebook.com/dev.burhanuddin/" target="_blank">
+                            <div class="flex flex-row space-x-2 md:p-5">
+                                <div class="px-4 py-5 md:px-0 md:py-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-blue" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                                    </svg>
+                                    <h1 class="pt-4 text-sm font-medium text-heading">Facebook
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-block w-4 h-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0.5 will-change-transform" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l14 0"></path>
+                                            <path d="M15 16l4 -4"></path>
+                                            <path d="M15 8l4 4"></path>
+                                        </svg>
+                                    </h1>
+                                    <p class="pt-1 text-xs text-paragraf">Discuss</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div draggable="false" aria-labelledby="title" class="relative group">
+                    <div class="w-full h-full rounded-2xl bg-blue/20">
+                        <div class="flex flex-row space-x-2 md:p-5">
+                            <div class="px-4 py-5 md:p-5 md:py-0 md:px-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-blue" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" />
+                                </svg>
+                                <h1 class="pt-4 text-sm font-medium text-heading">Linkedin</h1>
+                                <p class="pt-1 text-xs text-paragraf">Hire me</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-blue/30 h-full rounded-2xl motion-safe:transition-[clip-path] motion-safe:duration-500 ease-in [clip-path:circle(10%_at_-10%_10%)] group-hover:[clip-path:circle(170%_at_10%_10%)]">
+                        <a href="https://www.linkedin.com/in/04burhanuddin/" target="_blank">
+                            <div class="flex flex-row space-x-2 md:p-5">
+                                <div class="px-4 py-5 md:p-5 md:py-0 md:px-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-blue" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" />
+                                    </svg>
+                                    <h1 class="pt-4 text-sm font-medium text-heading">Linkedin
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-block w-4 h-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0.5 will-change-transform" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l14 0"></path>
+                                            <path d="M15 16l4 -4"></path>
+                                            <path d="M15 8l4 4"></path>
+                                        </svg>
+                                    </h1>
+                                    <p class="pt-1 text-xs text-paragraf">Hire me</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div draggable="false" aria-labelledby="title" class="relative group">
+                    <div class="w-full h-full rounded-2xl bg-blue/20">
+                        <div class="flex flex-row space-x-2 md:p-5">
+                            <div class="px-4 py-5 md:p-5 md:py-0 md:px-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+                                </svg>
+                                <h1 class="pt-4 text-sm font-medium text-heading">Telegram</h1>
+                                <p class="pt-1 text-xs capitalize text-paragraf">Discus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-blue/30 h-full rounded-2xl motion-safe:transition-[clip-path] motion-safe:duration-500 ease-in [clip-path:circle(10%_at_-10%_10%)] group-hover:[clip-path:circle(170%_at_10%_10%)]">
+                        <a href="https://t.me/O4burhanuddin/" target="_blank">
+                            <div class="flex flex-row space-x-2 md:p-5">
+                                <div class="px-4 py-5 md:p-5 md:py-0 md:px-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+                                    </svg>
+                                    <h1 class="pt-4 text-sm font-medium text-heading">Telegram
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-block w-4 h-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0.5 will-change-transform" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l14 0"></path>
+                                            <path d="M15 16l4 -4"></path>
+                                            <path d="M15 8l4 4"></path>
+                                        </svg>
+                                    </h1>
+                                    <p class="pt-1 text-xs text-paragraf">Discus..</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center w-full pt-10">
+                <span class="text-sm font-medium text-paragraf">Copyright © 2023 Burhanuddin</span>
+            </div>
+        </div>
+    </footer>
+    <div x-show="showContact" x-transition class="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-lg">
+        <div @click.outside="showContact = false" class="relative rounded-2xl bg-black border border-gray/10 sm:my-8 sm:align-middle sm:max-w-[18rem] inline-block w-64 text-left align-bottom transition-all">
+            <div class="z-20 my-8">
+                <div class="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-paragraf">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                </div>
+                <div class="mt-1 text-center">
+                    <h3 class="text-sm font-medium leading-6 capitalize md:text-base text-paragraf">Contact Me</h3>
+                    <div class="pt-1">
+                        <a href="mailto:04burhanuddin@proton.me?subject=Feedback&body=Message" class="text-sm transition duration-150 ease-out hover:text-orange link text-blue">04burhanuddin@proton.me</a>
+                    </div>
+                </div>
+            </div>
+            <svg @click="showContact = false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="p-1.5 hover:text-blue link w-6 h-6 rounded-full bg-red absolute top-0 right-0 z-50 text-heading">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+    </div>
+    <div class="flex items-center justify-center">
+        <button id="progress">
+            <span id="progress-value">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-heading" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 5l0 14"></path>
+                    <path d="M18 11l-6 -6"></path>
+                    <path d="M6 11l6 -6"></path>
+                </svg>
+            </span>
+        </button>
+    </div>
+    <script src="./js/app.js"></script>
+    <script defer src="https://unpkg.com/alpinejs-cursor@latest/dist/cursor.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>
