@@ -3,8 +3,7 @@ let calcScrollValue = () => {
     let progressValue = document.getElementById("progress-value");
     let pos = document.documentElement.scrollTop;
     let calcHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrollValue = Math.round((pos * 100) / calcHeight);
     if (pos > 100) {
         scrollProgress.style.display = "grid";
@@ -22,7 +21,6 @@ window.onload = calcScrollValue;
 document.addEventListener('DOMContentLoaded', () => {
     const homeLink = document.getElementById('homeLink');
     homeLink.classList.add('active');
-
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
