@@ -1,30 +1,54 @@
-let calcScrollValue = () => {
-    let scrollProgress = document.getElementById("progress");
-    let pos = document.documentElement.scrollTop;
-    let calcHeight =
-        document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrollValue = Math.round((pos * 100) / calcHeight);
-    if (pos > 100) {
-        scrollProgress.style.display = "grid";
-    } else {
-        scrollProgress.style.display = "none";
-    }
-    scrollProgress.addEventListener("click", () => {
-        document.documentElement.scrollTop = 0;
-    });
-    scrollProgress.style.background = `conic-gradient(#D65D0E ${scrollValue}%, #1D2021 ${scrollValue}%)`;
-};
-window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
-
-document.addEventListener('DOMContentLoaded', () => {
-    const homeLink = document.getElementById('homeLink');
-    homeLink.classList.add('active');
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.forEach(link => link.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
+window.addEventListener("scroll", function () {
+   const sections = document.querySelectorAll("section");
+   const navLinks = document.querySelectorAll("nav a");
+   sections.forEach((section, index) => {
+      const top = section.offsetTop;
+      const height = section.clientHeight;
+      if (window.scrollY >= top && window.scrollY < top + height) {
+         navLinks[index].classList.add("active");
+      } else {
+         navLinks[index].classList.remove("active");
+      }
+   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+   const homeLink = document.querySelector("nav a[href='#home']");
+   if (homeLink) {
+      homeLink.classList.add("active");
+   }
+});
+var focusedCard = document.querySelector('.spotlight');
+window.addEventListener('mousemove', e => {
+   var percentageX = e.pageX / window.innerWidth * 100;
+   var percentageY = e.pageY / window.innerHeight * 100;
+   if (focusedCard) {
+      focusedCard.style.backgroundImage = `radial-gradient(circle at ${percentageX}% ${percentageY}%, transparent 8.9rem, #131417 9rem`;
+   }
+});
+document.addEventListener('contextmenu', function (e) {
+   e.preventDefault();
+   showCustomNotification('Klik kanan tidak diizinkan!');
+});
+
+document.addEventListener('keydown', function (e) {
+   if ((e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key === 'u') || (e.keyCode == 123) || (e.ctrlKey && e.shiftKey && e.key === 'J')) {
+      showCustomNotification('Akses telah di blokir!');
+      e.preventDefault();
+      return false;
+   }
+});
+function showCustomNotification(message, type) {
+   var notification = document.createElement('div');
+   notification.className = 'notification ' + type;
+   notification.textContent = message;
+   document.body.appendChild(notification);
+   setTimeout(function () {
+      notification.style.display = 'block';
+   }, 100);
+   setTimeout(function () {
+      notification.style.display = 'none';
+      setTimeout(function () {
+         document.body.removeChild(notification);
+      }, 500);
+   }, 3000);
+}
