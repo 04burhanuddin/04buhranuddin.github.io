@@ -3,4 +3,12 @@
 /package.json
 /css/input.css
 /tailwind.config.js
-/.notes
+/bun.lockb
+/backup
+/css/markdown.css
+/css/_markdown.css
+/css/prism.css
+/js/prism.js
+/note.txt
+/markdown/arch.md
+/assets/blog
